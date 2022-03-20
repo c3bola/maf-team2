@@ -18,7 +18,8 @@
 
 - [x] Navegação entre as telas
 - [x] Conto com aúdio
-- [ ] Objetos identificados pela câmera
+- [x] IA para identificar os objetos
+- [ ] Integralizar a IA para identificar os objetos pela câmera
 - [ ] Geração das cartas a partir dos objetos capturados pela câmera
 - [ ] Funcionalidade da tela login
 - [ ] Funcionalidade da tela de perfil
