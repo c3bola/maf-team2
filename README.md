@@ -14,7 +14,7 @@
 <h4 align="center"> 
     🚧  React Select 🚀 Em construção...  🚧
 </h4>
-### Features
+# Features
 
 - [x] Navegação entre as telas
 - [x] Conto com aúdio
