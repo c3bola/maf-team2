@@ -1,0 +1,212 @@
+<div class="containerApp">
+    <h2 class="title-slide">Trilha do Aprendizado</h2>
+    <div class="swiper trilha">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-url="t-ranking.html">
+                    <img class="img-slide-1"
+                        src="assets/image/trilha/ranking.png">
+                    <div class="text-card">
+                        <h3>Ranking</h3>
+                        <p>Provoque a competitividade entre seus amigos, fique entre os primeiros e ganhe prêmios!!</p>
+                    </div>
+            </div>
+            <div class="swiper-slide" data-url="t-cartas.html">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/cartas.png">
+                <div class="text-card">
+                    <h3>Minhas cartas</h3>
+                    <p>Confira as cartas que você já desbloqueou ao descobrir novos objetos e palavras!</p>
+                </div>
+            </div>
+            <div class="swiper-slide" data-url="t-contos.html">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/contos.png">
+                <div class="text-card">
+                    <h3>Contos Francófonas</h3>
+                    <p>Pratique ouvindo contos curtos e interativos, testando sua compreensão e interpretação</p>
+                </div>
+            </div>
+            <div class="swiper-slide" data-url="t-discovery.html">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/descoberta.png">
+                <div class="text-card">
+                    <h3>Descoberta</h3>
+                    <p>Aponte a câmera do seu celular para objetos, descubra sua pronúncia e evolua o seu XP!!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="title-slide">Guia turístico</h2>
+
+    <div class="swiper2 guia">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/torre-eiffel.png">
+                <div class="text-card">
+                    <p>A Torre Eiffel, do século XIX é um ícone mundial da França. A torre é o 
+                        monumento pago mais visitado do mundo, com milhões de pessoas frequentando-o 
+                        anualmente.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/palacio.png">
+                <div class="text-card">
+                    <p>Esse palácio é o grande símbolo do poder dos monarcas na França absolutista. 
+                        O Palácio de Versalhes foi a casa dos reis franceses de 1682 até 1789.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/trilha/catedral-notre-dame.png">
+                <div class="text-card">
+                    <p>A Catedral Basílica Notre-Dame de Quebec é a casa da arquidiocese de Quebec e 
+                        uma das igrejas mais antigas da América do Norte. 
+                        Ela foi construída em 1647.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .title-slide{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .img-slide-1 {
+        width: 100% !important;
+        height: 50% !important;
+        padding-bottom: 10px;
+        position: fixed;
+        top: 0px;
+        
+
+    }
+
+    .text-card {
+        padding-top: 60%;
+        padding-left: 5%;
+    }
+    .btn-back {
+        background-color: var(--white);
+        width: 10vw;
+        height: 10vw;
+        border-radius: 16%;
+        background-image: url('assets/image/icons/arrow-back.png');
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 6%;
+        top: 3%;
+    }
+
+    .swiper-container-3d .swiper-slide-shadow-left,
+    .swiper-container-3d .swiper-slide-shadow-right {
+        border-radius: 40px
+    }
+    .container {
+        width: 85%;
+        transition: .4s
+    }
+    .swiper {
+        width: 50vw;
+        height: 60vw;
+    }
+
+    .swiper2 {
+        width: 70vw;
+        height: 60vw;
+        border-radius: 10%;
+        padding-bottom: 30%;
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+
+        text-align: left;
+        font-size: 16px;
+        background: var(--white);
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        /* -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        */
+        align-items: left;
+        border-radius: 17%;
+
+        box-shadow: 0px -5px 10px 1px rgba(100, 99, 99, 0.3);
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<script>
+    $('#tittle-header').html('Bonjour, Luisa!'); 
+    $('#slogan-header').text('Como você gostaria de aprender hoje?');
+
+    var trilha = new Swiper(".trilha", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        effect: "coverflow",
+        slideToClickedSlide: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -20,
+            depth: 125,
+            modifier: 2,
+            slideShadows: true
+        }
+    });
+    var guia = new Swiper(".guia", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        effect: "coverflow",
+        slideToClickedSlide: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -20,
+            depth: 125,
+            modifier: 2,
+            slideShadows: true
+        }
+    });
+    trilha.on('click', function () {
+        // console.log(this);
+        // console.log(this.slides[this.activeIndex].dataset.url);
+        getActionMenu(this.slides[this.activeIndex].dataset.url);
+    });
+
+
+
+    $(document).ready(function () {
+        // $('.header').addClass('animate__animated animate__fadeOut');
+        // $('.header').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+        //     $(this).css('display', 'none');
+        // });
+        //
+    });
+</script>
+<!-- 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+    https://stackoverflow.com/questions/4919680/html5-placeholder-css-padding
+    https://www.colorzilla.com/gradient-editor/
+    https://forums.digitalpoint.com/threads/roboto-font-looks-ugly-in-firefox-and-safari.2750879/
+ -->

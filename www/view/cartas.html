@@ -1,0 +1,202 @@
+<div class="containerApp" style="padding-top:85%;">
+    <div class="swiper trilha">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/cartas/cadeira.png">
+                <div class="text-card">
+                    <h3>Chaise</h3>
+                    <p style="font-weight: bolder;">Cadeira</p>
+                    <p>Je veux m'asseoir dans cette chaise rouge.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/cartas/cadeira.png">
+                <div class="text-card">
+                    <h3>Titulo</h3>
+                    <p>Texto bla bla bla bal</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/cartas/cadeira.png">
+                <div class="text-card">
+                    <h3>Titulo</h3>
+                    <p>Texto bla bla bla bal</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="img-slide-1"
+                    src="assets/image/cartas/cadeira.png">
+                <div class="text-card">
+                    <h3>Titulo</h3>
+                    <p>Texto bla bla bla bal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .title-slide{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .img-slide-1 {
+        width: 100% !important;
+        height: 50% !important;
+        padding-bottom: 10px;
+        position: fixed;
+        top: 0px;
+        
+
+    }
+
+    .text-card {
+        padding-top: 60%;
+        padding-left: 5%;
+    }
+
+    
+
+    .nav-button {
+        padding-left: 25px;
+        width: 32px;
+        height: 32px;
+        padding-right: 25px;
+    }
+
+    
+
+
+
+    .btn-back {
+        background-color: var(--white);
+        width: 10vw;
+        height: 10vw;
+        border-radius: 16%;
+        background-image: url('assets/image/icons/arrow-back.png');
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 6%;
+        top: 3%;
+    }
+
+
+    
+
+    .swiper-container-3d .swiper-slide-shadow-left,
+    .swiper-container-3d .swiper-slide-shadow-right {
+        border-radius: 40px
+    }
+
+    
+
+
+    .container {
+        width: 85%;
+        transition: .4s
+    }
+
+    .swiper {
+        width: 50vw;
+        height: 60vw;
+    }
+
+    .swiper2 {
+        width: 70vw;
+        height: 60vw;
+        /* overflow: hidden; */
+        border-radius: 10%;
+        padding-bottom: 30%;
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+
+        text-align: left;
+        font-size: 18px;
+        background: var(--white);
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        /* -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        */
+        align-items: left;
+        border-radius: 17%;
+
+        box-shadow: 0px -5px 10px 1px rgba(100, 99, 99, 0.3);
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<script>
+    $('#tittle-header').html('Minhas Cartas'); 
+    $('#slogan-header').text('Aqui você pode conferir suas cartas!');
+
+
+    var trilha = new Swiper(".trilha", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        effect: "coverflow",
+        slideToClickedSlide: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -20,
+            depth: 125,
+            modifier: 2,
+            slideShadows: true
+        }
+    });
+    var guia = new Swiper(".guia", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        effect: "coverflow",
+        slideToClickedSlide: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -20,
+            depth: 125,
+            modifier: 2,
+            slideShadows: true
+        }
+    });
+    swiper.on('click', function () {
+        // console.log(this);
+        // console.log(this.slides[this.activeIndex].dataset.url);
+        getActionMenu(this.slides[this.activeIndex].dataset.url);
+    });
+
+
+
+    $(document).ready(function () {
+        // $('.header').addClass('animate__animated animate__fadeOut');
+        // $('.header').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+        //     $(this).css('display', 'none');
+        // });
+        //
+    });
+</script>
+<!-- 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+    https://stackoverflow.com/questions/4919680/html5-placeholder-css-padding
+    https://www.colorzilla.com/gradient-editor/
+    https://forums.digitalpoint.com/threads/roboto-font-looks-ugly-in-firefox-and-safari.2750879/
+ -->

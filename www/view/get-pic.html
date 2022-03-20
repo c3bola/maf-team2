@@ -1,0 +1,74 @@
+<div class="space-icon" id="icon-cam" onclick="getPhoto.capturePhotoCamera()">
+    Teste aqui dentro
+    <div class="photo-icon icon-camera"></div>
+</div>
+
+<script>
+    //para trocar a foto do perfil 
+    var getPhoto = {
+		initialize: function () {
+			document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+		},
+		onDeviceReady: function () {
+		},
+		capturePhotoCamera: function () {
+			navigator.camera.getPicture(onSuccess, onFail, {
+				quality: 30,
+				allowEdit: false,
+				destinationType: Camera.DestinationType.DATA_URL,
+				saveToPhotoAlbum: true,
+				sourceType: Camera.PictureSourceType.CAMERA,
+				correctOrientation: true,
+				encodingType: Camera.EncodingType.JPEG
+
+			});
+			closeNewPhoto();
+			function onSuccess(imageData) {
+				getPhoto.uploadImage(imageData);
+			}
+			function onFail(message) { }
+		},
+		capturePhotoGallery: function () {
+			navigator.camera.getPicture(onSuccess, onFail, {
+				quality: 30,
+				allowEdit: false,
+				destinationType: Camera.DestinationType.DATA_URL,
+				saveToPhotoAlbum: true,
+				sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+				correctOrientation: true,
+				encodingType: Camera.EncodingType.JPEG
+
+			});
+			closeNewPhoto();
+			function onSuccess(imageData) {
+				getPhoto.uploadImage(imageData);
+			}
+
+			function onFail(message) {
+			}
+		},
+		uploadImage(imageData) {
+			$.ajax({
+				url: 'https://object-detection-enchante.herokuapp.com/json',
+				type: 'POST',
+				data: {
+					'image': imageData,
+					'id': new Date().getTime()
+				},
+				beforeSend: function () {
+					// $(".loader").css("display", "flex");
+				}
+			}).done(function (msg) {
+				// localStorage.setItem("imagemPerfil", msg.foto);
+                // $(".photo-profile").css("background-image", "url('"+ localStorage.getItem('imgPerfil') + localStorage.getItem('imagemPerfil') + "?t=" + new Date().getTime() + "')");
+				// $(".loader").css("display", "none");
+				alert('error', msg)
+			}).fail(function (msg) {
+				// $(".loader").css("display", "none");
+				alert('error', msg)
+			});
+
+		}
+	};
+	getPhoto.initialize();
+</script>

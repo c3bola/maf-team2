@@ -1,0 +1,197 @@
+<!-- <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"> -->
+<div class="containerApp">
+    <div class="area-busca">
+        <div class="container-busca">
+            <p>Tittle</p>
+        </div>
+    </div>
+    <section>
+
+
+        <ul class="">
+            <li class="w3-bar">
+
+                <img src="assets/image/avatar/pam.png" class="w3-bar-item w3-circle avatar">
+                <div class="w3-bar-item">
+                    <p class="balao">Testes de texto teste do que rola com o app</p>
+                </div>
+            </li>
+            <li class="w3-bar">
+
+                <img src="assets/image/avatar/mike.png" class="w3-bar-item w3-circle avatar">
+                <div class="w3-bar-item">
+                    <p class="balao">Testes de texto teste do que rola com o app</p>
+                </div>
+            </li>
+            <li class="w3-bar">
+
+                <img src="assets/image/avatar/pam.png" class="w3-bar-item w3-circle avatar">
+                <div class="w3-bar-item">
+                    <p class="balao">Testes de texto teste do que rola com o app</p>
+                </div>
+            </li>
+        </ul>
+
+
+    </section>
+
+
+
+
+</div>
+
+<style>
+    .avatar {
+        width: 40px !important;
+        top: 15%;
+        position: relative;
+    }
+
+    .w3-bar {
+        width: 100%;
+        overflow: hidden
+    }
+
+    .w3-circle {
+        border-radius: 50%
+    }
+
+    .w3-bar .w3-bar-item {
+        padding: 8px 16px;
+        float: left;
+        width: 72%;
+        border: none;
+        display: block;
+        outline: 0
+    }
+
+    .w3-bar:before,
+    .w3-bar:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+    .bg:hover {
+        animation: pulse 1.2s ease infinite;
+    }
+
+
+    .pam {
+        background-image: url('assets/image/avatar/pam.png');
+        background-repeat: no-repeat;
+        background-size: 32px;
+    }
+
+    .balao {
+        background: #7e57c2;
+
+        /* top: 20px; */
+        /* left: 120px; */
+        /* left: 57px; */
+        width: 60%;
+        /* float: left; */
+        font-family: 'open sans';
+        font-size: 0.85em;
+        line-height: 1.6em;
+        border-radius: 15px;
+        /* width: 40%; */
+        height: auto;
+        color: #fff;
+        padding: 20px;
+        position: relative;
+        /* margin-top: 30px; */
+        /* max-width: 50%; */
+        /* white-space: nowrap; */
+    }
+
+    .balao:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: -10px;
+        top: 17px;
+        background: #7e57c2;
+        -webkit-transform: rotate(45deg);
+    }
+
+    .center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center
+    }
+
+    .container {
+        width: 85%;
+        transition: .4s
+    }
+
+    .container-busca {
+        width: 85%;
+        position: absolute;
+        transition: .4s
+    }
+
+
+    /* .open-footer {
+        height: 88%;
+        -webkit-transition: 1s;
+    } */
+</style>
+<script>
+    // var swiper = new Swiper(".nutricionist", {
+    //     slidesPerView: "auto",
+    //     centeredSlides: true,
+    //     effect: "coverflow",
+    //     slideToClickedSlide:true,
+    //     coverflowEffect: {
+    //         rotate: 0,
+    //         stretch: -20,
+    //         depth: 125,
+    //         modifier: 2,
+    //         slideShadows: true
+    //     }
+    // });
+    // swiper.on('click', function () {
+    //     // console.log(this);
+    //     // console.log(this.slides[this.activeIndex].dataset.url);
+    //     getActionMenu(this.slides[this.activeIndex].dataset.url);
+    // });
+    var lastY;
+    $('.footer-panel').bind('touchmove', function (e) {
+        // $(this).toggleClass('open-footer');
+        // $('.footer-panel section').css('overflow', 'scroll');
+        // $(".footer-panel section").append(`<div class="row-box-footer">
+        //         <div class="box-footer-nutri">
+        //             <div class="icon-box-footer"></div>
+        //             <p>Teste</p>
+        //         </div>
+        //         <div class="box-footer-nutri">
+        //             <div class="icon-box-footer"></div>
+        //             <p>Teste</p>
+        //         </div>
+        //         <div class="box-footer-nutri">
+        //             <div class="icon-box-footer"></div>
+        //             <p>Teste</p>
+
+        //         </div>
+        //     </div>`);
+    }
+    );
+</script>
+<!-- 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+    https://stackoverflow.com/questions/4919680/html5-placeholder-css-padding
+    https://www.colorzilla.com/gradient-editor/
+    https://forums.digitalpoint.com/threads/roboto-font-looks-ugly-in-firefox-and-safari.2750879/
+ -->
